@@ -7,7 +7,7 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      name: {
+      investor_name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -15,6 +15,36 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
+      },
+      city: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      country: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      balance: {
+        type: Sequelize.DECIMAL(10, 2),
+        allowNull: false,
+      },
+      photo: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      portfolio_value: {
+        type: Sequelize.DECIMAL(10, 2),
+        allowNull: false,
+      },
+      first_access: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
+      },
+      super_angel: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
       },
       password_hash: {
         type: Sequelize.STRING,

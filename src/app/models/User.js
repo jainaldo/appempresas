@@ -5,8 +5,15 @@ class User extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
+        investor_name: Sequelize.STRING,
         email: Sequelize.STRING,
+        city: Sequelize.STRING,
+        country: Sequelize.STRING,
+        balance: Sequelize.DECIMAL,
+        photo: Sequelize.STRING,
+        portfolio_value: Sequelize.DECIMAL,
+        first_access: Sequelize.BOOLEAN,
+        super_angel: Sequelize.BOOLEAN,
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
       },

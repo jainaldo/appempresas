@@ -16,13 +16,30 @@ class SessionController {
       return res.status(401).json({ error: 'Password does not match' });
     }
 
-    const { id, name } = user;
+    const {
+      id,
+      investor_name,
+      city,
+      country,
+      balance,
+      photo,
+      portfolio_value,
+      fisrt_access,
+      super_angel,
+    } = user;
 
     return res.json({
-      user: {
+      investor: {
         id,
-        name,
+        investor_name,
         email,
+        city,
+        country,
+        balance: Number(balance),
+        photo,
+        portfolio_value: Number(portfolio_value),
+        fisrt_access,
+        super_angel,
       },
       token: jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
