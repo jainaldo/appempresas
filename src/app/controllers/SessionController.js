@@ -24,7 +24,7 @@ class SessionController {
       balance,
       photo,
       portfolio_value,
-      fisrt_access,
+      first_access,
       super_angel,
     } = user;
 
@@ -38,7 +38,7 @@ class SessionController {
         balance: Number(balance),
         photo,
         portfolio_value: Number(portfolio_value),
-        fisrt_access,
+        first_access,
         super_angel,
       },
       token: jwt.sign({ id }, authConfig.secret, {
