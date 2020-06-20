@@ -32,6 +32,9 @@ class Enterprise extends Model {
       foreignKey: 'type_id',
       as: 'enterprise_type',
     });
+    this.belongsTo(models.Portfolio, {
+      foreignKey: 'portfolio_id',
+    });
   }
 }
 
